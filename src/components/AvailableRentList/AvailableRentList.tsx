@@ -25,8 +25,9 @@ function AvailableRentList({rerenderData, rerender}: Props) {
   useEffect(() => {
     fetchApartments(priceSort, roomFilter)
       .then(response => setApartments(response.data))
-      .catch(error => UnsuccessfulLoadingToast(toast, 'Cannot reach server'))
+      .catch(_ => UnsuccessfulLoadingToast(toast, 'Cannot reach server'))
       .finally(() => setLoading(false));
+    // eslint-disable-next-line
   }, [rerenderData, priceSort, roomFilter]);
 
   return (

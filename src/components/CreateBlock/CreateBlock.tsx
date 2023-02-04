@@ -31,10 +31,10 @@ function CreateBlock({rerender}: Props) {
 
   const onSubmit = () => {
     createApartment({
-      name: name,
+      name,
+      description,
       price: +price,
       rooms: +rooms,
-      description: description,
     })
       .then(response => {
         if (response.data) {

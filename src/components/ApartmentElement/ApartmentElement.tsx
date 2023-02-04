@@ -1,7 +1,7 @@
 import {Apartment} from "../../models/apartment";
 import {
   Box, Button,
-  Card, CardBody, CardFooter,
+  Card, CardBody, CardFooter, Center,
   Heading, Stack,
   Tag, Text, useToast,
 } from "@chakra-ui/react";
@@ -49,14 +49,13 @@ function ApartmentElement({apartment, rerender}: Props) {
           </Stack>
         </CardBody>
         <CardFooter>
-          <Stack direction='column' w='100%'>
-            <Button colorScheme='blue' w={{sm: 150, base: '100%'}}>Rent</Button>
+          <Center w='100%'>
             <Button
               colorScheme='red'
               w={{sm: 150, base: '100%'}}
               onClick={onApartmentDelete}
             >Delete</Button>
-          </Stack>
+          </Center>
         </CardFooter>
       </Stack>
     </Card>

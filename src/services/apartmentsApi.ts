@@ -1,7 +1,7 @@
 import axios from "axios";
 import {CreateApartment} from "../models/create-apartment";
 
-const baseUrl = 'http://127.0.0.1:5512/apartments'
+const baseUrl = process.env.REACT_APP_API_BASE_URL;
 
 export const fetchApartments = async (price: string | null, rooms: number | null) => {
   return axios
